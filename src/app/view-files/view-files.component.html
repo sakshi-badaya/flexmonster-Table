@@ -1,0 +1,12 @@
+<div  *ngIf="dialogData.dialogData != 'save'">
+<div *ngFor="let file of files; let i =index">
+    <div style="cursor:pointer;" (click)="donloadFile(file)"> {{i+1}}. {{file}}</div>
+    <br>
+</div>
+</div>
+
+<div *ngIf="dialogData.dialogData == 'save'">
+filename: <input type="text" [(ngModel)]="fileName">
+<br><br>
+<button  (click)="donloadFile(fileName)">OK</button>
+</div>

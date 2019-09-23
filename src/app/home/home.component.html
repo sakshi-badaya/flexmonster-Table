@@ -1,0 +1,28 @@
+
+<h1>Flexmonster Pivot Table</h1>
+
+<img src="assets/datasource.png" (click)="viewDatasource()" style="height: 40px;width: 40px;">
+&nbsp;&nbsp;
+<!-- <button type="button" (click)="viewDatasource()">View Datasource</button> -->
+
+<input #fileInput type="file" ng2FileSelect [uploader]="uploader" />
+<!-- <img src="assets/save.png" (click)="save()" style="height: 40px;width: 40px;"> -->
+  <!-- <button (click)="save()">save</button> -->
+  &nbsp;&nbsp;
+  
+<img src="assets/viewfile.png" (click)="viewFiles()" style="height: 40px;width: 40px;">
+<!-- <button type="button" (click)="viewFiles()">View Files</button> -->
+
+<fm-pivot #pivot 
+  [toolbar]="true" 
+  [width]="'100%'" 
+  [height]="500" 
+  [licenseKey]="'Z7PE-XC674Z-252Y04-4Z0U5V'"
+  [report]="pivotReport"
+  [customizeCell]="onCustomizeCell"
+  (ready)="onPivotReady($event)"
+  (reportcomplete)="onReportComplete($event)">
+</fm-pivot>
+<div id="pivotContainer">The component will appear here</div>
+
+<!-- <input type='file' (change)="fileChanged($event)"> -->

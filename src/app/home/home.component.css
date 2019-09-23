@@ -1,0 +1,7 @@
+#fm-toolbar-wrapper #fm-toolbar li#fm-tab-connect {
+    display: none;
+}
+/* 
+li:nth-child(6) {
+   list-style-type: none; 
+} */
